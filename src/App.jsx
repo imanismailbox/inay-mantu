@@ -1,3 +1,5 @@
+import ismailPhoto from './assets/ismail.png'
+import titikPhoto from './assets/titik.png'
 function App() {
   return (
     <>
@@ -10,12 +12,12 @@ function App() {
               <div className="avatar-group -space-x-6 flex-wrap items-center justify-center gap-2">
                 <div className="avatar">
                   <div className="w-24">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src={ismailPhoto} />
                   </div>
                 </div>
                 <div className="avatar">
                   <div className="w-24">
-                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <img src={titikPhoto} />
                   </div>
                 </div>
               </div>
