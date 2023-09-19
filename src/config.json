@@ -1,0 +1,13 @@
+{
+  "pria": {
+    "nama": "Iman Ismail",
+    "panggilan": "Ismail",
+    "foto": "/pria.png"
+  },
+  "wanita": {
+    "nama": "Titik Marini",
+    "panggilan": "Titik",
+    "foto": "/wanita.png"
+  },
+  "background": "/romantic-ornaments-with-flowers.jpg"
+}
