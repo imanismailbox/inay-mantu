@@ -2,7 +2,7 @@ export default function Popup({data, kepada}) {
   return (
     <>
       <dialog id="my_modal_4" className="modal" open>
-        <div className="modal-box grid bg-base-200 place-items-center text-center min-h-screen max-w-md sm:w-full md:max-w-2xl">
+        <div className="modal-box grid bg-base-200 place-items-center text-center min-h-screen max-w-sm w-full">
           <div className="flex items-center justify-center">
             <div className="flex flex-col">
               <div className='flex justify-center'>
@@ -22,9 +22,9 @@ export default function Popup({data, kepada}) {
                   </div>
                 </div>
               </div>
-              <p className="mt-10 mb-3">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+              <p className="mt-6 mb-2">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
               <div className='flex justify-center'>
-                <div className="card w-11/12 bg-base-100 shadow-xl mb-6">
+                <div className="card w-11/12 bg-base-100 shadow-xl mb-2">
                   <div className="card-body items-center text-center">
                     <h2 className="card-title">{kepada}</h2>
                   </div>

@@ -1,4 +1,8 @@
 {
+  "kepada": "Tamu Istimewa",
+  "hari": "Sabtu",
+  "tanggal": "21 November 2023",
+  "timestamp": 1697850000000,
   "pria": {
     "nama": "Iman Ismail",
     "panggilan": "Ismail",
@@ -8,6 +12,16 @@
     "nama": "Titik Marini",
     "panggilan": "Titik",
     "foto": "/wanita.png"
+  },
+  "akad":{
+    "tanggal":"",
+    "jam":"",
+    "lokasi":""
+  },
+  "resepsi":{
+    "tanggal":"",
+    "jam":"",
+    "lokasi":""
   },
   "background": "/romantic-ornaments-with-flowers.jpg"
 }
