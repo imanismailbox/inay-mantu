@@ -2,7 +2,7 @@ export default function Popup({data, kepada}) {
   return (
     <>
       <dialog id="my_modal_4" className="modal" open>
-        <div className="modal-box grid bg-base-200 place-items-center text-center min-h-screen max-w-sm w-full">
+        <div className="modal-box grid bg-base-200 place-items-center text-center min-h-screen max-w-md sm:w-full">
           <div className="flex items-center justify-center">
             <div className="flex flex-col">
               <div className='flex justify-center'>
