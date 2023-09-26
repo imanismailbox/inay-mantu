@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import config from './config.json'
 import Popup from './components/Popup'
 // import Slide from './components/Slide'
-import Fullpage from './components/FullPage';
+import Fullpage from './components/Fullpage';
 import Navigation from './components/Navigation';
 // import AudioPlayer from './components/AudioPlayer';
 import useSound from 'use-sound';
