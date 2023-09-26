@@ -4,12 +4,12 @@ import asmarandana from '../assets/asmarandana.mp3'
 
 export default function Navigation () {
 	const [isChecked, setIsChecked] = useState(true);
-  const [play, {stop}] = useSound(asmarandana);
+  const [play, {pause, stop}] = useSound(asmarandana);
 	useEffect(()=>{
 		if (isChecked) {
 			play()
 		} else {
-			stop()
+			pause()
 		}
 	})
 	return(
