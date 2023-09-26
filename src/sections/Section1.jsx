@@ -1,3 +1,5 @@
+import React from "react"
+
 const Section1 = ({data}) => {
   return(
     <>
@@ -24,12 +26,11 @@ const Section1 = ({data}) => {
 					  </p>
             <h2 className="text-lg mb-0 pb-0">{data.hari}</h2>
             <h2 className="text-lg mb-3">{data.tanggal}</h2>
-            {/* <Countdown date={data.timestamp} renderer={renderer}>
-					    <Completionist />
-					  </Countdown> */}
           </div>
         </div>
       </div>
     </>
   )
 }
+
+export default Section1
