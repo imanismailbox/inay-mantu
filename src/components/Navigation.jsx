@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
-import asmarandana from '../assets/asmarandana.mp3'
+import bgSound from '../assets/jannat64.mp3'
 
 export default function Navigation () {
 	const [isChecked, setIsChecked] = useState(true);
-  const [play, {pause, stop}] = useSound(asmarandana);
+  const [play, {pause, stop}] = useSound(bgSound);
 	useEffect(()=>{
 		if (isChecked) {
 			play()
@@ -14,14 +14,14 @@ export default function Navigation () {
 	})
 	return(
 		<>
-			<div className="fixed z-50 w-full h-16 max-w-sm -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2">
+			<div className="fixed z-50 h-16 w-full max-w-sm -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2">
 				<div className="grid h-full max-w-sm grid-cols-5 mx-auto">
 					<button
 						type="button"
-						className="inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-50 dark:hover:bg-gray-800 group"
+						className="inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-50 group"
 					>
 						<svg
-							className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+							className="w-5 h-5 mb-1 text-gray-500 group-hover:text-primary"
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -33,10 +33,10 @@ export default function Navigation () {
 					</button>
 					<button
 						type="button"
-						className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+						className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group"
 					>
 						<svg
-							className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+							className="w-5 h-5 mb-1 text-gray-500 group-hover:text-primary"
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"
@@ -49,7 +49,7 @@ export default function Navigation () {
 					</button>
 
 					<div className="flex items-center justify-center">
-						<label className="swap items-center justify-center w-10 h-10 font-medium bg-primary rounded-full hover:bg-primary-700 group hover:shadow-lg hover:shadow-primary-focus focus:ring-4 focus:ring-blue-300 focus:outline-none">
+						<label className="swap items-center justify-center w-10 h-10 font-medium bg-primary rounded-full hover:bg-primary-700 group hover:shadow-lg hover:shadow-primary-focus focus:ring-4 focus:ring-primary-300 focus:outline-none">
 							
 							{/* this hidden checkbox controls the state */}
 							<input type="checkbox"
@@ -67,10 +67,10 @@ export default function Navigation () {
 					
 					<button
 						type="button"
-						className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+						className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group"
 					>
 						<svg
-							className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+							className="w-5 h-5 mb-1 text-gray-500 group-hover:text-primary"
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
@@ -89,10 +89,10 @@ export default function Navigation () {
 					
 					<button
 						type="button"
-						className="inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 dark:hover:bg-gray-800 group"
+						className="inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 group"
 					>
 						<svg
-							className="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+							className="w-5 h-5 mb-1 text-gray-500 group-hover:text-primary"
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="currentColor"

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Section1 from '../sections/Section1';
+import Section2 from '../sections/Section2';
+import Section3 from '../sections/Section3';
 
 
 export default function Fullpage({data}) {
@@ -16,8 +18,21 @@ export default function Fullpage({data}) {
             <div className="section">
               <Section1 data={data}/>
             </div>
+
             <div className="section">
-              <p>Section 2</p>
+              <Section2 data={data}/>
+            </div>
+            
+            <div className="section">
+              <Section3 data={data}/>
+            </div>
+            
+            <div className="section">
+              <Section1 data={data}/>
+            </div>
+            
+            <div className="section">
+              <Section1 data={data}/>
             </div>
           </ReactFullpage.Wrapper>
         );

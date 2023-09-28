@@ -6,12 +6,18 @@
   "pria": {
     "nama": "Iman Ismail",
     "panggilan": "Ismail",
-    "foto": "/pria.png"
+    "foto": "/pria.png",
+    "avatar": "/ava-pria.png",
+    "deskripsi": "Putra kelima dari Bapak Ridin (alm) <br\/>dan Ibu Suciati",
+    "alamat": "Ds. Surajaya, Kec. Pemalang, Kab. Pemalang"
   },
   "wanita": {
     "nama": "Titik Marini",
     "panggilan": "Titik",
-    "foto": "/wanita.png"
+    "foto": "/wanita.png",
+    "avatar": "/ava-wanita.png",
+    "deskripsi": "Putri keempat dari Bapak Sutarso (alm) <br\/>dan Ibu Tarminah (almh)",
+    "alamat": "Ds. Kebojongan, Kec. Comal, Kab. Pemalang"
   },
   "akad":{
     "tanggal":"",

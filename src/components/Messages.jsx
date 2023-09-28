@@ -1,11 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import TimeAgo from 'javascript-time-ago'
-
-import en from 'javascript-time-ago/locale/en'
-import id from 'javascript-time-ago/locale/id'
-
-TimeAgo.addDefaultLocale(en)
-TimeAgo.addLocale(id)
 
 import ReactTimeAgo from 'react-time-ago'
 
@@ -44,7 +37,7 @@ export default function Messages() {
               <div className="chat-header">
                 {message.name} 
                 <time className="text-xs opacity-50 pl-1">
-                  <ReactTimeAgo date={message.created_at} locale="id-ID" />
+                  <ReactTimeAgo date={message.created_at} />
                     {/* <ReactTimeAgo date={message.created_at} locale="id-ID" timeStyle="twitter"/> */}
                 </time>
               </div>
