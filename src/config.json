@@ -1,12 +1,12 @@
 {
   "kepada": "Tamu Istimewa",
   "hari": "Sabtu",
-  "tanggal": "21 November 2023",
+  "tanggal": "21 Oktober 2023",
   "timestamp": 1697850000000,
   "pria": {
     "nama": "Iman Ismail",
     "panggilan": "Ismail",
-    "foto": "/pria.png",
+    "foto": "/001.jpg",
     "avatar": "/ava-pria.png",
     "deskripsi": "Putra kelima dari Bapak Ridin (alm) <br\/>dan Ibu Suciati",
     "alamat": "Ds. Surajaya, Kec. Pemalang, Kab. Pemalang"
@@ -14,20 +14,18 @@
   "wanita": {
     "nama": "Titik Marini",
     "panggilan": "Titik",
-    "foto": "/wanita.png",
+    "foto": "/002.jpg",
     "avatar": "/ava-wanita.png",
     "deskripsi": "Putri keempat dari Bapak Sutarso (alm) <br\/>dan Ibu Tarminah (almh)",
     "alamat": "Ds. Kebojongan, Kec. Comal, Kab. Pemalang"
   },
   "akad":{
-    "tanggal":"",
-    "jam":"",
-    "lokasi":""
+    "jam":"08.30 WIB - Selesai",
+    "lokasi":"Kediaman Mempelai Putri"
   },
   "resepsi":{
-    "tanggal":"",
-    "jam":"",
-    "lokasi":""
+    "jam":"13.00 WIB - Selesai",
+    "lokasi":"Kediaman Mempelai Putri"
   },
   "background": "/romantic-ornaments-with-flowers.jpg"
 }

@@ -3,28 +3,24 @@ const Section2 = ({data}) => {
   const deskripsi2 = data.wanita.deskripsi
   return(
     <>
-      <div className="grid place-items-center text-center">
+      <div className="grid place-items-center text-center min-h-screen">
         <div className="flex items-center justify-center">
           <div className="flex flex-col">
-            <h1 className="text-2xl my-5">Kedua Mempelai</h1>
-            <div className="card w-full bg-base-100 px-2 py-3 shadow-lg">
+            <div className="card w-96 py-3 glass shadow-lg mb-16">
               <div className="card-body items-center text-center">
+                <h1 className="text-xl underline decoration-wavy font-body font-bold my-5 mb-10">Kedua Mempelai</h1>
                 <div className="avatar">
-                  <div className="w-28 rounded-full shadow-lg">
-                    <img src={data.pria.avatar} />
+                  <div className="w-24 rounded-full ring-4 ring-base-100 shadow-lg">
+                    <img src={data.pria.foto} />
                   </div>
                 </div>
                 <h2 className="card-title font-display text-2xl">{data.pria.nama}</h2>
                 <p className="text-sm" dangerouslySetInnerHTML={{ __html: data.pria.deskripsi }}></p>
                 <p className="text-xs">({data.pria.alamat})</p>
-              </div>
-            </div>
-
-            <div className="card w-full bg-base-100 px-2 py-3 shadow-lg mt-3">
-              <div className="card-body items-center text-center">
+                <h2 className="font-display font-bold text-4xl my-3">&amp;</h2>
                 <div className="avatar">
-                  <div className="w-28 rounded-full shadow-lg">
-                    <img src={data.wanita.avatar} />
+                  <div className="w-24 rounded-full ring-4 ring-base-100 shadow-lg">
+                    <img src={data.wanita.foto} />
                   </div>
                 </div>
                 <h2 className="card-title font-display text-2xl">{data.wanita.nama}</h2>

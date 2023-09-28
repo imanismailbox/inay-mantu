@@ -18,10 +18,13 @@
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background-image: url('/romantic-ornaments-with-flowers.jpg');
-    background-repeat: repeat;
-    background-size: cover;
     font-family: 'Josefin Sans', sans-serif;
+    background-color: #e3e4e4;
+    background-image: url('/romantic-ornaments-with-flowers.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: 100%;
+    background-position: bottom;
   }
   .title {
     font-family: 'Great Vibes', cursive;;

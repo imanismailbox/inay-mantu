@@ -1,17 +1,30 @@
-import { useEffect, useState } from "react";
-import useSound from "use-sound";
+import { useRef, useState } from "react";
+import ReactAudioPlayer from 'react-audio-player';
+// import useSound from "use-sound";
 import bgSound from '../assets/jannat64.mp3'
 
 export default function Navigation () {
-	const [isChecked, setIsChecked] = useState(true);
-  const [play, {pause, stop}] = useSound(bgSound);
-	useEffect(()=>{
-		if (isChecked) {
-			play()
+	const [isChecked, setIsChecked] = useState(false);
+	const [autoplay, setAutoplay] = useState(true);
+	const [isPlaying, setIsPlaying] = useState(true);
+	const player = useRef()
+  // const [play, {pause, stop}] = useSound(bgSound);
+	// useEffect(()=>{
+	// 	if (isChecked) {
+	// 		play()
+	// 	} else {
+	// 		pause()
+	// 	}
+	// })
+	const togglePlay = () => {
+		setIsPlaying(!isPlaying)
+		if (isPlaying) {
+			player.current.audioEl.current.pause()
 		} else {
-			pause()
+			player.current.audioEl.current.play()
 		}
-	})
+		// player.current.audio.current.pause()
+	}
 	return(
 		<>
 			<div className="fixed z-50 h-16 w-full max-w-sm -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2">
@@ -53,8 +66,8 @@ export default function Navigation () {
 							
 							{/* this hidden checkbox controls the state */}
 							<input type="checkbox"
-								checked={isChecked}
-								onChange={() => setIsChecked(!isChecked)}/>
+								checked={isPlaying}
+								onChange={togglePlay}/>
 							
 							{/* volume on icon */}
 							<svg className="swap-on fill-current h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z"/></svg>
@@ -104,6 +117,14 @@ export default function Navigation () {
 					</button>
 				</div>
 			</div>
+			<ReactAudioPlayer
+				src={bgSound}
+				loop
+				autoPlay={autoplay}
+				// muted={isChecked}
+				id="bg-sound"
+				ref={player}
+			/>
 		</>
 	)
 }
