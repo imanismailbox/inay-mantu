@@ -1,30 +1,24 @@
 {
-  "kepada": "Tamu Istimewa",
-  "hari": "Sabtu",
-  "tanggal": "21 Oktober 2023",
-  "timestamp": 1697850000000,
   "pria": {
     "nama": "Iman Ismail",
     "panggilan": "Ismail",
-    "foto": "/pria.png",
-    "avatar": "/pria.png",
+    "foto": "/pria.jpg",
     "deskripsi": "Putra kelima dari Bapak Ridin (alm) <br\/>dan Ibu Suciati",
     "alamat": "Ds. Surajaya, Kec. Pemalang, Kab. Pemalang"
   },
   "wanita": {
     "nama": "Titik Marini",
     "panggilan": "Titik",
-    "foto": "/wanita.png",
-    "avatar": "/wanita.png",
+    "foto": "/wanita.jpg",
     "deskripsi": "Putri keempat dari Bapak Sutarso (alm) <br\/>dan Ibu Tarminah (almh)",
     "alamat": "Ds. Kebojongan, Kec. Comal, Kab. Pemalang"
   },
-  "akad":{
-    "jam":"08.30 WIB - Selesai",
-    "lokasi":"Kediaman Mempelai Putri"
-  },
-  "resepsi":{
-    "jam":"13.00 WIB - Selesai",
+  "acara": {
+    "hari": "Sabtu",
+    "tanggal": "21 Oktober 2023",
+    "timestamp": 1697850000000,
+    "akad": "08.00 WIB - Selesai",
+    "resepsi":"13.00 WIB - Selesai",
     "lokasi":"Kediaman Mempelai Putri"
   },
   "background": "/romantic-ornaments-with-flowers.jpg"

@@ -40,13 +40,13 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
   }
 };
 
-const Section1 = ({data}) => {
+const Pembuka = ({data}) => {
   return(
     <>
       <div className="grid place-items-center text-center min-h-screen">
-        <div className="flex items-center justify-center">
-          <div className="flex flex-col">
-            <div className="card w-96 py-3 glass shadow-lg mb-16">
+        <div className="card w-96 py-3 glass shadow-lg my-5">
+          <div className="flex items-center justify-center">
+            <div className="flex flex-col">
               <div className="card-body items-center text-center">
                 <h1 className="text-lg font-mono mb-5">Undangan Pernikahan</h1>
                 <h1 className="md:text-5xl text-4xl font-bold font-display">{data.pria.panggilan} & {data.wanita.panggilan}</h1>
@@ -66,7 +66,7 @@ const Section1 = ({data}) => {
                   Dengan Memohon Rahmat dan Ridlo Allah SWT.<br/>
                   Kami Mengharapkan Do'a Restu dan Kehadiran Anda.
                 </p>
-                <h2 className="text-lg m-3">{data.hari}, {data.tanggal}</h2>
+                <h2 className="text-lg underline decoration-wavy decoration-primary">{data.acara.hari}, {data.acara.tanggal}</h2>
                 <h2 className="text-lg">Simpan Event:</h2>
                 <div className="flex-wrap items-center justify-center gap-2 mx-auto mb-3">
                   <AddToCalendarButton className="z-50"
@@ -85,7 +85,7 @@ const Section1 = ({data}) => {
                     lightMode="bodyScheme"
                   ></AddToCalendarButton>
                 </div>
-                <Countdown date={data.timestamp} renderer={renderer}>
+                <Countdown date={data.acara.timestamp} renderer={renderer}>
                   <Completionist />
                 </Countdown>
               </div>
@@ -97,4 +97,4 @@ const Section1 = ({data}) => {
   )
 }
 
-export default Section1
+export default Pembuka

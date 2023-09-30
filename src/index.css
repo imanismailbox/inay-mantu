@@ -10,53 +10,20 @@
 
 @layer base {
   html {
-    font-family: Proxima Nova, system-ui, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
   }
   body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: #e3e4e4;
-    background-image: url('/romantic-ornaments-with-flowers.jpg');
+    min-height:100vh;
+    background-color: #c6adee;
+    background-image: url('/bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;  
-    background-size: 100%;
-    background-position: bottom;
+    background-size: cover;
+    background-position: center;
   }
   .title {
     font-family: 'Great Vibes', cursive;;
   }
-}
-@layer utilities {
-  .snap {
-    scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint)
-  }
-  .snap-y {
-    --scroll-snap-direction: y;
-  }
-  .snap-mandatory {
-    --scroll-snap-constraint: mandatory;
-  }
-  .snap-start {
-    scroll-snap-align: start;
-  }
-}
-.swiper {
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .animate__animated {
