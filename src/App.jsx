@@ -36,6 +36,11 @@ function App() {
     }
   }
 
+  const bukaUndangan = () => {
+    player.current.audioEl.current.play()
+    setOpening(!opening)
+  }
+
   return (
     <>
       <div className='mx-auto snap-y snap-mandatory'>
@@ -70,7 +75,7 @@ function App() {
                   </div>
                 </div>
                 <div className='flex justify-center'>
-                  <button onClick={()=>{setOpening(!opening)}} className="animate__animated animate__headShake animate__slow animate__infinite infinite btn btn-primary shadow-lg shadow-primary-focus md:my-5 my-10">Buka Undangan</button>
+                  <button onClick={bukaUndangan} className="animate__animated animate__headShake animate__slow animate__infinite infinite btn btn-primary shadow-lg shadow-primary-focus md:my-5 my-10">Buka Undangan</button>
                 </div>
               </div>
             </div>
