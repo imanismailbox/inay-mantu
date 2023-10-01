@@ -18,8 +18,6 @@ function App() {
   const [tujuan, setTujuan] = useState('Tamu Istimewa')
   const [data, setData] = useState(config);
   const [opening, setOpening] = useState(true);
-  const [isChecked, setIsChecked] = useState(false);
-  const [autoplay, setAutoplay] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
   const player = useRef()
   
@@ -103,7 +101,7 @@ function App() {
       <ReactAudioPlayer
         src={bgSound}
         loop
-        autoPlay={autoplay}
+        autoPlay
         id="bg-sound"
         ref={player}
       />
