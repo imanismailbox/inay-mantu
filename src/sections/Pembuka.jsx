@@ -1,4 +1,4 @@
-import Countdown from "react-countdown";
+import Countdown, {zeroPad} from "react-countdown";
 import { AddToCalendarButton } from 'add-to-calendar-button-react';
 
 const Completionist = () => <span>Terima Kasih Atas Doa Restu dan Kehadirannya!</span>;
@@ -11,27 +11,27 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     // Render a countdown
     return (
       <div className="grid grid-flow-col gap-5 text-center auto-cols-max mx-auto">
-        <div className="flex flex-col">
-          <span className="countdown font-mono text-3xl">
-            <span style={{"--value": days}}></span>
+        <div className="flex flex-col w-14 p-2 bg-neutral rounded-box text-neutral-content">
+          <span className="font-mono text-3xl">
+            <span>{zeroPad(days)}</span>
           </span>
           hari
         </div> 
-        <div className="flex flex-col">
-          <span className="countdown font-mono text-3xl">
-            <span style={{"--value": hours}}></span>
+        <div className="flex flex-col w-14 p-2 bg-neutral rounded-box text-neutral-content">
+          <span className="font-mono text-3xl">
+            <span>{zeroPad(hours)}</span>
           </span>
           jam
         </div> 
-        <div className="flex flex-col">
-          <span className="countdown font-mono text-3xl">
-            <span style={{"--value": minutes}}></span>
+        <div className="flex flex-col w-14 p-2 bg-neutral rounded-box text-neutral-content">
+          <span className="font-mono text-3xl">
+            <span>{zeroPad(minutes)}</span>
           </span>
           menit
         </div> 
-        <div className="flex flex-col">
-          <span className="countdown font-mono text-3xl">
-            <span style={{"--value": seconds}}></span>
+        <div className="flex flex-col w-14 p-2 bg-neutral rounded-box text-neutral-content">
+          <span className="font-mono text-3xl">
+            <span>{zeroPad(seconds)}</span>
           </span>
           detik
         </div>
@@ -43,8 +43,8 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 const Pembuka = ({data}) => {
   return(
     <>
-      <div className="grid place-items-center text-center min-h-screen">
-        <div className="card w-96 py-3 glass shadow-lg my-5">
+      <div className="grid place-items-center text-center min-h-screen sm:px-2">
+        <div className="card md:w-96 w-full py-3 glass shadow-lg my-5">
           <div className="flex items-center justify-center">
             <div className="flex flex-col">
               <div className="card-body items-center text-center">
@@ -85,7 +85,12 @@ const Pembuka = ({data}) => {
                     lightMode="bodyScheme"
                   ></AddToCalendarButton>
                 </div>
-                <Countdown date={data.acara.timestamp} renderer={renderer}>
+                <Countdown 
+                  date={data.acara.timestamp}
+                  zeroPadTime={2} 
+                  zeroPadDays={2} 
+                  renderer={renderer}
+                >
                   <Completionist />
                 </Countdown>
               </div>

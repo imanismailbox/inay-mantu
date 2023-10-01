@@ -50,7 +50,7 @@ function App() {
                 </div>
                 <p className="mt-6 mb-2">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
                 <div className='flex justify-center'>
-                  <div className="card w-10/12 bg-base-100 shadow-xl mb-2">
+                  <div className="card w-80 bg-base-100 shadow-xl mb-2">
                     <div className="card-body items-center text-center">
                       <h2 className="card-title">{tujuan}</h2>
                     </div>

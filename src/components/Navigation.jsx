@@ -28,7 +28,7 @@ export default function Navigation () {
 	return(
 		<>
 			<div title="Play/Pause Music"
-        className="fixed z-90 bottom-1/2 right-10">
+        className="fixed z-50 bottom-1/3 left-4">
         <label className="swap items-center justify-center w-10 h-10 font-medium text-white bg-primary rounded-full hover:bg-primary-700 group hover:shadow-lg hover:shadow-primary-focus focus:ring-4 focus:ring-primary-300 focus:outline-none">
           <input type="checkbox" 
           	checked={isPlaying}

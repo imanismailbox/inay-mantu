@@ -1,8 +1,8 @@
 const Pengantin = ({pria, wanita}) => {
   return(
     <>
-      <div className="grid place-items-center text-center">
-        <div className="card w-96 py-3 glass shadow-lg my-5">
+      <div className="grid place-items-center text-center sm:px-2">
+        <div className="card md:w-96 w-full py-3 glass shadow-lg my-5">
           <div className="flex items-center justify-center">
             <div className="flex flex-col">
               <div className="card-body items-center text-center">
