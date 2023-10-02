@@ -52,7 +52,7 @@ export default function BukuTamu() {
 
   return(
     <>
-      <div className="grid place-items-center text-center sm:px-2">
+      <div className="grid place-items-center text-center px-2">
         <div className="card md:w-96 w-full py-3 bg-base-100 shadow-lg my-5">
           <div className="flex items-center justify-center">
             <div className="flex flex-col">
