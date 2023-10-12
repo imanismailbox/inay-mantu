@@ -92,7 +92,11 @@ export default function BukuTamu() {
                 ):(
                 <div className="max-h-96 w-full overflow-y-scroll">
                 {bukutamu.map((p) => (
+                  { p.nama=="iman ismail" ? (
+                  <div className="chat chat-end my-2" key={p.id}>
+                  ):(
                   <div className="chat chat-start my-2" key={p.id}>
+                  )}
                     <div className="chat-image avatar">
                       <div className="w-10 rounded-full">
                         { p.nama=="iman ismail" ? (
