@@ -33,10 +33,10 @@ export default function BukuTamu() {
     fetch('https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
-      body: {
+      body: JSON.stringify({ 
         "chat_id": -957974370,
-        "text": nama + " : " + ucapan +" - "+hadir
-      }
+        "text": nama+" : "+ucapan+" - "+hadir
+      })
     });
 
     if (data) {
