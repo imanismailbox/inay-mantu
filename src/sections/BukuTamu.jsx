@@ -22,8 +22,8 @@ export default function BukuTamu() {
     var text = encodeURI(nama+":"+ucapan+" - "+hadir)
     console.log(text)
     fetch(
-      "https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage?chat_id=-957974370&text="+text
-    ).then((response) => response.json());
+      "https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage?chat_id=-957974370&text=x"+text
+    ).then((response) => console.log(response.json()));
     
     const { data, error } = await supabase
       .from('ucapan')
@@ -64,7 +64,7 @@ export default function BukuTamu() {
             <div className="flex flex-col">
               <div className="card-body">
                 <h1 className="text-xl underline decoration-wavy font-body font-bold my-5 mb-10">Ucapan ({bukutamu.length})</h1>
-                <div className="form-control w-64">
+                <div className="form-control w-full">
                   <label className="label">
                     <span className="label-text">Nama?</span>
                   </label>
