@@ -26,18 +26,17 @@ export default function BukuTamu() {
       ])
       .select()
 
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ "chat_id": -957974370, "text": nama+" : "+ucapan+" - "+hadir })
+    };
+    fetch('https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage', requestOptions)
+      .then((response) => console.log(response))
+
       setNama('');
       setUcapan('');
       setHadir(1);
-
-    fetch('https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage', {
-      method: 'post',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({ 
-        "chat_id": -957974370,
-        "text": nama+" : "+ucapan+" - "+hadir
-      })
-    });
 
     if (data) {
       // setBukutamu(values=>([...values, data]))
