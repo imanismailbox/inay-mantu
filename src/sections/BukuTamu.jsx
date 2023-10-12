@@ -19,20 +19,17 @@ export default function BukuTamu() {
   };
 
   const addNew = async () => {
+    var text = encodeURI(nama+":"+ucapan+" - "+hadir)
+    fetch(
+      "https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage?chat_id=-957974370&text="+text
+    ).then((response) => response.json());
+    
     const { data, error } = await supabase
       .from('ucapan')
       .insert([
         { nama: nama, ucapan: ucapan, hadir: hadir }
       ])
       .select()
-
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: { "chat_id": -957974370, "text": nama+" : "+ucapan+" - "+hadir }
-    };
-    fetch('https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage', requestOptions)
-      .then((response) => console.log(response))
 
       setNama('');
       setUcapan('');
