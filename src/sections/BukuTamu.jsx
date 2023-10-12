@@ -20,6 +20,7 @@ export default function BukuTamu() {
 
   const addNew = async () => {
     var text = encodeURI(nama+":"+ucapan+" - "+hadir)
+    console.log(text)
     fetch(
       "https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage?chat_id=-957974370&text="+text
     ).then((response) => response.json());
