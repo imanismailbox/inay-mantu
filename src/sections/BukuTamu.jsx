@@ -95,7 +95,11 @@ export default function BukuTamu() {
                   <div className="chat chat-start my-2" key={p.id}>
                     <div className="chat-image avatar">
                       <div className="w-10 rounded-full">
+                        { p.nama=="iman ismail" ? (
+                        <img src='https://avatars.githubusercontent.com/u/6139348?v=4' />
+                        ):(
                         <img src={`https://ui-avatars.com/api/?name=${p.nama}&background=random`} />
+                        )}
                       </div>
                     </div>
                     <div className="chat-header">
