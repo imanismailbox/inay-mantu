@@ -19,30 +19,32 @@ export default function BukuTamu() {
   };
 
   const addNew = async () => {
-    var pesan = encodeURI(nama+" : "+ucapan+" - "+hadir)
-    // console.log(pesan)
-    fetch('https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage?chat_id=-957974370&text='+pesan)
-      .then(res => res.json())
-    
-    const { data, error } = await supabase
-      .from('ucapan')
-      .insert([
-        { nama: nama, ucapan: ucapan, hadir: hadir }
-      ])
-      .select()
+    if(nama.length>0) {
+      var pesan = encodeURI(nama+" : "+ucapan+" - "+hadir)
+      // console.log(pesan)
+      fetch('https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage?chat_id=-957974370&text='+pesan)
+        .then(res => res.json())
+      
+      const { data, error } = await supabase
+        .from('ucapan')
+        .insert([
+          { nama: nama, ucapan: ucapan, hadir: hadir }
+        ])
+        .select()
 
-      setNama('');
-      setUcapan('');
-      setHadir(1);
+        setNama('');
+        setUcapan('');
+        setHadir(1);
 
-    if (data) {
-      // setBukutamu(values=>([...values, data]))
-      fetchAll()
-      // setIsAdded(true)
-      setMsg("Pesan terkirim");
-    }
-    if (error) {
-      setErrorMsg(error.message);
+      if (data) {
+        // setBukutamu(values=>([...values, data]))
+        fetchAll()
+        // setIsAdded(true)
+        setMsg("Pesan terkirim");
+      }
+      if (error) {
+        setErrorMsg(error.message);
+      }
     }
   };
 
