@@ -129,7 +129,7 @@ export default function BukuTamu() {
                     {p.ucapan.length>0?(
                       <div className="chat-bubble text-left text-sm">{p.ucapan}</div>
                     ):(
-                      <div className="chat-bubble text-left text-sm">Semoga sakinah mawadan warohmah. aamiin</div>
+                      <div className="chat-bubble text-left text-sm">Semoga sakinah mawadah wa rohmah. aamiin</div>
                     )}
                     
                     { p.hadir===true ? (
