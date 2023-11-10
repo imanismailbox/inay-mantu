@@ -20,7 +20,7 @@ export default function BukuTamu() {
   };
 
   const addNew = async () => {
-    if(nama.length>0) {
+    if(nama.length==0) {
       var pesan = encodeURI(nama+" : "+ucapan+" - "+hadir)
       // console.log(pesan)
       fetch('https://api.telegram.org/bot6544179398:AAEgw19T4YZVyvnJvzireIFIRraZdAyWpqk/sendMessage?chat_id=-957974370&text='+pesan)
@@ -126,7 +126,12 @@ export default function BukuTamu() {
                         <ReactTimeAgo date={Date.parse(p.created_at)} locale="id-ID" timeStyle="twitter"/>
                       </time>
                     </div>
-                    <div className="chat-bubble text-left text-sm">{p.ucapan}</div>
+                    {p.ucapan.length>0?(
+                      <div className="chat-bubble text-left text-sm">{p.ucapan}</div>
+                    ):(
+                      <div className="chat-bubble text-left text-sm">Semoga sakinah mawadan warohmah. aamiin</div>
+                    )}
+                    
                     { p.hadir===true ? (
                       <div className="chat-footer text-primary">
                         Insya Allah hadir
