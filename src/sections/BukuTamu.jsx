@@ -11,6 +11,7 @@ export default function BukuTamu() {
   const [hadir, setHadir] = useState(1);
   const [errorMsg, setErrorMsg] = useState('');
   const [msg, setMsg] = useState('');
+  const [nameNull, setNameNull] = useState(false)
 
   const fetchAll = async () => {
     const { data, error } = await supabase.from('ucapan').select('*').order('created_at', { ascending: false })
@@ -45,6 +46,9 @@ export default function BukuTamu() {
       if (error) {
         setErrorMsg(error.message);
       }
+      setNameNull(false)
+    } else {
+      setNameNull(true)
     }
   };
 
@@ -64,6 +68,12 @@ export default function BukuTamu() {
           <div className="flex items-center justify-center">
             <div className="flex flex-col">
               <div className="card-body">
+                {nameNull===true ? (
+                <div className="alert alert-error">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <span>Pesan tidak terkirim!</span>
+                </div>
+                ):(<></>)}
                 <h1 className="text-xl underline decoration-wavy font-body font-bold my-5 mb-10">Ucapan ({bukutamu.length})</h1>
                 <div className="form-control w-full">
                   <label className="label">
