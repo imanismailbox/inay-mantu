@@ -77,7 +77,7 @@ export default function BukuTamu() {
                   <label className="label">
                     <span className="label-text">Pesan?</span>
                   </label>
-                  <textarea placeholder="tulis ucapan kamu disini..." className="textarea textarea-bordered rounded-md w-full max-w-sm" onChange={(e) => setUcapan(e.target.value)} value={ucapan} required />
+                  <textarea placeholder="tulis ucapan kamu disini..." className="textarea textarea-bordered rounded-md w-full max-w-sm" onChange={(e) => setUcapan(e.target.value)} value={ucapan} required={true} />
                 </div>
                 <div className="form-control w-full">
                   <label className="label">
